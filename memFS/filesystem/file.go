@@ -53,6 +53,7 @@ func (f *File) DeleteAllContent() error {
 }
 
 func (f File) Persist(dirPath string) error {
+	//This allows the user to save the file from memory to disk
 	if err := os.Chdir(dirPath); err != nil {
 		os.Mkdir(dirPath, 0777)
 		err = os.Chdir(dirPath)
